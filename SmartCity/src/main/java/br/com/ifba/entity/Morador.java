@@ -24,5 +24,4 @@ public class Morador extends Usuario{
             System.out.println(ocorrencia);
         }
     }
-
 }

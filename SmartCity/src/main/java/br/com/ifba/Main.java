@@ -126,8 +126,11 @@ public class Main {
 //                                            System.out.println("Data da ocorrência: ");//vai pegar now(); por enquanto
                                             LocalDateTime dataOcorrencia = LocalDateTime.now();
                                             System.out.println("Categoria da ocorrência: ");
+                                            for (Categoria c : Categoria.values()){//Mostra as categorias disponíveis
+                                                System.out.println("- " + c.name());
+                                            }
                                             String nomeCategoria = sc.next();
-                                            Categoria categoria = new Categoria(nomeCategoria);
+                                            Categoria categoria = Categoria.valueOf(nomeCategoria.toUpperCase());//vai exigir uma exceção no futuro
                                             System.out.println("-------------Endereço da ocorrência-------------");
                                             System.out.println("-----------------------------------------------------");
                                             System.out.println("Rua: ");
@@ -142,7 +145,7 @@ public class Main {
                                             String cep = sc.next();
                                             System.out.println("-----------------------------------------------------");
                                             Endereco endereco = new Endereco(rua, numero, bairro, cidade, cep);
-                                            Ocorrencia novaOcorrencia = moradorLogado.gerarOcorrencia(titulo, descricao, dataOcorrencia, categoria,endereco);
+                                            Ocorrencia novaOcorrencia = moradorLogado.gerarOcorrencia(titulo, descricao, dataOcorrencia, categoria,endereco);//vai depender de uma exceção voltada para categoria
                                             System.out.println(novaOcorrencia);
                                             moradorLogado.addOcorrencia(novaOcorrencia);//lista de ocorrencias de um morador
                                             ocorrenciaController.addOcorrencia(novaOcorrencia);//lista de todas as ocorrencias

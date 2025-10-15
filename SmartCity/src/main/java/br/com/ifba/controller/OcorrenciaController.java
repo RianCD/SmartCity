@@ -4,7 +4,9 @@ import br.com.ifba.entity.Ocorrencia;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+ * Classe responsável por armazenar e buscar ocorrencias
+ * */
 public class OcorrenciaController {
     private List<Ocorrencia> ocorrencias = new ArrayList<>();
 

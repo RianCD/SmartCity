@@ -1,7 +1,7 @@
 package br.com.ifba.entity;
 
 public class Usuario {
-    private Long id;
+    private final Long id = (long) (Math.random() * 101);
     private String nome;
     private String telefone;
     private String email;

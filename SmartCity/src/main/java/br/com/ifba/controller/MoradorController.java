@@ -4,11 +4,10 @@ import br.com.ifba.entity.Morador;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+ * Classe responsável por armazenar e buscar moradores
+ * */
 public class MoradorController {
-    /*
-    * Classe responsável por armazenar e buscar moradores
-    * */
     private List<Morador> moradores = new ArrayList<>();
 
     public void cadastrarMorador(Morador morador){

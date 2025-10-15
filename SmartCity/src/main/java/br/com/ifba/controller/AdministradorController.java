@@ -4,9 +4,10 @@ import br.com.ifba.entity.Administrador;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+ * Classe responsável por armazenar e buscar administradores
+ * */
 public class AdministradorController {
-
     private List<Administrador> administradores = new ArrayList<>();
 
     public void cadastrarAdministrador(Administrador administrador){
