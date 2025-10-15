@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Morador extends Usuario{
-    private List<Ocorrencia> ocorrencias = new ArrayList<>();
+    private final List<Ocorrencia> ocorrencias = new ArrayList<>();
     public Morador(String nome, String telefone, String email, String senha) {
         super(nome, telefone, email, senha);
     }
@@ -18,9 +18,16 @@ public class Morador extends Usuario{
         return ocorrencias;
     }
 
-//    public void setOcorrencias(List<Ocorrencia> ocorrencias) {
-//        this.ocorrencias = ocorrencias;
-//    }
+    @Override
+    public String toString() {
+        return "Morador{" +
+                "ocorrencias=" + ocorrencias +
+                '}';
+    }
+
+    public void addOcorrencia(Ocorrencia ocorrencia) {
+        ocorrencias.add(ocorrencia);
+    }
 
     //adicionar metodo validar morador
 }

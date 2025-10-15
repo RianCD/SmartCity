@@ -14,4 +14,17 @@ public class Usuario {
         this.senha = senha;
     }
     //Irei implementar o meio otimizado de utilizar o ID em todas as classes
+
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }
