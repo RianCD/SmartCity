@@ -15,7 +15,7 @@ public class MoradorController {
         moradores.add(morador);
     }
 
-    public Morador buscarMoradorPorEmail (String email){
+    public Morador buscarMoradorByEmail(String email){
         for (Morador m : moradores){
             if (m.getEmail().equalsIgnoreCase(email)){
                 return m;
