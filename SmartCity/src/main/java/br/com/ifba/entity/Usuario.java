@@ -6,4 +6,12 @@ public class Usuario {
     private String telefone;
     private String email;
     private String senha;
+
+    public Usuario(String nome, String telefone, String email, String senha) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.email = email;
+        this.senha = senha;
+    }
+    //Irei implementar o meio otimizado de utilizar o ID em todas as classes
 }
