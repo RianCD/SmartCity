@@ -15,7 +15,6 @@ public class Usuario {
     }
     //Irei implementar o meio otimizado de utilizar o ID em todas as classes
 
-
     public String getNome() {
         return nome;
     }
@@ -26,5 +25,16 @@ public class Usuario {
 
     public String getEmail() {
         return email;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                '}';
     }
 }

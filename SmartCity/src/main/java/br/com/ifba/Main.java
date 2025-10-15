@@ -110,12 +110,13 @@ public class Main {
                                             String titulo = sc.next();
                                             System.out.println("Descrição da ocorrência: ");
                                             String descricao = sc.next();
-                                            System.out.println("Data da ocorrência: ");//vai pegar now(); por enquanto
+//                                            System.out.println("Data da ocorrência: ");//vai pegar now(); por enquanto
                                             LocalDateTime dataOcorrencia = LocalDateTime.now();
                                             System.out.println("Categoria da ocorrência: ");
                                             String nomeCategoria = sc.next();
                                             Categoria categoria = new Categoria(nomeCategoria);
-                                            System.out.println("Endereço da ocorrência: ");
+                                            System.out.println("-------------Endereço da ocorrência-------------");
+                                            System.out.println("-----------------------------------------------------");
                                             System.out.println("Rua: ");
                                             String rua = sc.next();
                                             System.out.println("Numero: ");
@@ -126,12 +127,17 @@ public class Main {
                                             String cidade = sc.next();
                                             System.out.println("CEP: ");
                                             String cep = sc.next();
+                                            System.out.println("-----------------------------------------------------");
                                             Endereco endereco = new Endereco(rua, numero, bairro, cidade, cep);
                                             Ocorrencia novaOcorrencia = moradorLogado.gerarOcorrencia(titulo, descricao, dataOcorrencia, categoria,endereco);
                                             moradorLogado.addOcorrencia(novaOcorrencia);
                                             System.out.println("Ocorrência registrada com sucesso!!!");
                                             break;
                                         case 2:
+                                            System.out.println("-----------------------------------------------------");
+                                            System.out.println("Listando suas ocorrências:");
+                                            moradorLogado.listOcorrencias();
+                                            System.out.println("-----------------------------------------------------");
                                             break;
                                         case 3:
                                             break;

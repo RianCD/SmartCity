@@ -22,4 +22,16 @@ public class Ocorrencia {
 //        this.morador = morador;
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Ocorrencia{" +
+                "titulo='" + titulo + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", dataOcorrencia=" + dataOcorrencia +
+                ", categoria=" + categoria +
+                ", endereco=" + endereco +
+                ", status=" + status +
+                '}';
+    }
 }

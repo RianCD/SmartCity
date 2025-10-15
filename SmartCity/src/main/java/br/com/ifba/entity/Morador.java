@@ -18,16 +18,13 @@ public class Morador extends Usuario{
         return ocorrencias;
     }
 
-    @Override
-    public String toString() {
-        return "Morador{" +
-                "ocorrencias=" + ocorrencias +
-                '}';
-    }
-
     public void addOcorrencia(Ocorrencia ocorrencia) {
         ocorrencias.add(ocorrencia);
     }
 
-    //adicionar metodo validar morador
+    public void listOcorrencias (){
+        for (Ocorrencia ocorrencia : ocorrencias){
+            System.out.println(ocorrencia);
+        }
+    }
 }
