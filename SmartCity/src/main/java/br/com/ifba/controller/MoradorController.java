@@ -23,7 +23,20 @@ public class MoradorController {
         return null;
     }
 
-    public List<Morador> getMoradores() {
-        return moradores;
+    public Morador buscarMoradorById(Long id){
+        for (Morador m : moradores){
+            if (m.getId().equals(id))
+                return m;
+        }
+        return null;
+    }
+
+    public void listarMoradores() {
+        for (Morador m : moradores)
+            System.out.println(m);
+    }
+
+    public void deleteMorador(Long id){
+        moradores.remove(buscarMoradorById(id));
     }
 }

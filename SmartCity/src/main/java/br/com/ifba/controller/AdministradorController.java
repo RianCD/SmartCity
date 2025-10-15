@@ -22,4 +22,22 @@ public class AdministradorController {
         }
         return null;
     }
+
+    public Administrador buscarAdministradorById(Long id){
+        for (Administrador a : administradores){
+            if (a.getId().equals(id)){
+                return a;
+            }
+        }
+        return null;
+    }
+
+    public void listarAdministradores(){
+        for (Administrador a : administradores)
+            System.out.println(a);
+    }
+
+    public void deleteAdministrador(Long id){
+        administradores.remove(buscarAdministradorById(id));
+    }
 }

@@ -22,4 +22,13 @@ public class OcorrenciaController {
         }
         return null;
     }
+
+    public void listarOcorrencias(){
+        for (Ocorrencia o : ocorrencias)
+            System.out.println(o);
+    }
+
+    public void deleteOcorrencia(Long id){
+        ocorrencias.remove(buscarOcorrenciaById(id));
+    }
 }
