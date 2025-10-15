@@ -22,8 +22,21 @@ public class Ocorrencia {
         this.status = status;
     }
 
+//    public void atualizarStatus(Status status){
+//    Utilizar quando implementar exceptions que irão precisar de regras de negócio
+//        setStatus(status);
+//    }
+
     public Long getId() {
         return id;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 
     @Override

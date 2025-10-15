@@ -70,6 +70,19 @@ public class Main {
                                         case 2:
                                             break;
                                         case 3:
+                                            System.out.println("Informe o Id da ocorrência: ");
+                                            Long id = sc.nextLong();
+                                            administradorLogado.visualizarOcorrencia(id);
+                                            //esse processo vai necessitar de uma exceção no futuro
+                                            System.out.println("Informe o novo status da ocorrência: ");
+                                            for (Status status : Status.values())
+                                                System.out.println("- " + status.name());
+                                            String status = sc.next();
+                                            Status novoStatus = Status.valueOf(status.toUpperCase());
+                                            administradorLogado.atualizarStatusOcorrencia(novoStatus, id);
+                                            administradorLogado.visualizarOcorrencia(id);
+                                            System.out.println("Status da ocorrência atualizado com sucesso!");
+                                            //--------------------------------------------------------
                                             break;
                                         case 4:
                                             break;
