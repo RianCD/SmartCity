@@ -17,7 +17,11 @@ public class Administrador extends Usuario{
         System.out.println(ocorrencia);
     }
 
+    public void visualizarTodasOcorrencias(){
+        ocorrenciaController.listarOcorrencias();
+    }
+
     public void atualizarStatusOcorrencia(Status status, Long id){
-        ocorrenciaController.buscarOcorrenciaById(id).setStatus(status);
+        ocorrenciaController.buscarOcorrenciaById(id).atualizarStatus(status);
     }
 }

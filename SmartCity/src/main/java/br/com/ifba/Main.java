@@ -68,6 +68,10 @@ public class Main {
                                             administradorLogado.visualizarOcorrencia(idOcorrencia);
                                             break;
                                         case 2:
+                                            System.out.println("-----------------Listando todas as ocorrências-----------------");
+                                            System.out.println("----------------------------------------------------------------");
+                                            administradorLogado.visualizarTodasOcorrencias();
+                                            System.out.println("----------------------------------------------------------------");
                                             break;
                                         case 3:
                                             System.out.println("Informe o Id da ocorrência: ");
@@ -126,7 +130,8 @@ public class Main {
                                     System.out.println("-------------------------Menu do morador-------------------------");
                                     System.out.println("1 - Gerar ocorrência");
                                     System.out.println("2 - Listar ocorrências");
-                                    System.out.println("3 - Sair");
+                                    System.out.println("3 - Deletar ocorrência");
+                                    System.out.println("4 - Sair");
                                     System.out.println("Escolha uma opção: ");
                                     option = sc.nextInt();
                                     System.out.println("-----------------------------------------------------------------");
@@ -162,6 +167,7 @@ public class Main {
                                             System.out.println(novaOcorrencia);
                                             moradorLogado.addOcorrencia(novaOcorrencia);//lista de ocorrencias de um morador
                                             ocorrenciaController.addOcorrencia(novaOcorrencia);//lista de todas as ocorrencias
+                                            novaOcorrencia.exibirResumo();
                                             System.out.println("Ocorrência registrada com sucesso!!!");
                                             break;
                                         case 2:
@@ -171,11 +177,23 @@ public class Main {
                                             System.out.println("-----------------------------------------------------");
                                             break;
                                         case 3:
+                                            System.out.println("Informe o Id da ocorrência que deseja excluir: ");
+                                            Long id = sc.nextLong();
+                                            System.out.println("Resumo da ocorrência: ");
+                                            ocorrenciaController.buscarOcorrenciaById(id).exibirResumo();
+                                            System.out.println("Tem certeza que deseja deletar essa ocorrência? (1 - SIM / 2 - NÃO");
+                                            String escolha = sc.next();
+                                            if (escolha.equals("1")){
+                                                moradorLogado.deletarOcorrencia(id);
+                                                System.out.println("Ocorrência deletada com sucesso!");
+                                            }else{
+                                                System.out.println("ok...");
+                                            }
                                             break;
                                         default:
                                             break;
                                     }
-                                }while (option != 3);
+                                }while (option != 4);
                                 break;
                         }
                     }while (option != 3);

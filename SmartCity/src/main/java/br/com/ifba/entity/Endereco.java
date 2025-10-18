@@ -16,6 +16,26 @@ public class Endereco {
         this.cep = cep;
     }
 
+    public String getRua() {
+        return rua;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
     @Override
     public String toString() {
         return "Endereco{" +

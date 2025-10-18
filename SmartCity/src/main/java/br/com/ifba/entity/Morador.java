@@ -1,11 +1,14 @@
 package br.com.ifba.entity;
 
+import br.com.ifba.controller.OcorrenciaController;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Morador extends Usuario{
     private final List<Ocorrencia> ocorrencias = new ArrayList<>();
+    private OcorrenciaController ocorrenciaController;
 
     public Morador(String nome, String telefone, String email, String senha) {
         super(nome, telefone, email, senha);
@@ -23,5 +26,9 @@ public class Morador extends Usuario{
         for (Ocorrencia ocorrencia : ocorrencias){
             System.out.println(ocorrencia);
         }
+    }
+
+    public void deletarOcorrencia(Long id){
+        ocorrenciaController.deleteOcorrencia(id);
     }
 }

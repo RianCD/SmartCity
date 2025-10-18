@@ -18,21 +18,51 @@ public class Ocorrencia {
         this.dataOcorrencia = dataOcorrencia;
         this.categoria = categoria;
         this.endereco = endereco;
-//        this.morador = morador;
         this.status = status;
     }
 
-//    public void atualizarStatus(Status status){
-//    Utilizar quando implementar exceptions que irão precisar de regras de negócio
-//        setStatus(status);
-//    }
+    public String exibirResumo(){
+        return "A ocorrência " + getTitulo() +
+                " ocorreu às " + getDataOcorrencia() +
+                " na rua " + endereco.getRua()  +
+                ", nº " + endereco.getNumero() +
+                " Status: " + getClass();
+    }
 
-    public Long getId() {
-        return id;
+    public void atualizarStatus(Status status){
+        setStatus(status);
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public LocalDateTime getDataOcorrencia() {
+        return dataOcorrencia;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public Morador getMorador() {
+        return morador;
     }
 
     public Status getStatus() {
         return status;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public void setStatus(Status status) {
